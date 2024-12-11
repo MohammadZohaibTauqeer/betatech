@@ -1,4 +1,5 @@
 import 'package:betatech/modules/home.dart';
+import 'package:betatech/modules/portfolio.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,8 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => Portfolio(),
+        //'/': (context) => const HomePage(),
         // '/anotherPage': (context) => const AnotherPage(),
       },
     );
