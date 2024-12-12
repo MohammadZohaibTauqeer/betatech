@@ -39,13 +39,12 @@ class FooterBar extends StatelessWidget {
                 ),
               ),
               // Product section
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 100.5, vertical: 50),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 100.5, vertical: 50),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Product',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -54,8 +53,8 @@ class FooterBar extends StatelessWidget {
                         color: Color(0xFF202020),
                       ),
                     ),
-                    const SizedBox(height: 30),
-                    const Text(
+                    SizedBox(height: 30),
+                    Text(
                       'Logo Design\n\nGraphic Design\n\nWebsite Design\n\nMobile Design',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -69,13 +68,12 @@ class FooterBar extends StatelessWidget {
                 ),
               ),
               // Company section
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 100.5, vertical: 50),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 100.5, vertical: 50),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Company',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -84,8 +82,8 @@ class FooterBar extends StatelessWidget {
                         color: Color(0xFF202020),
                       ),
                     ),
-                    const SizedBox(height: 30),
-                    const Text(
+                    SizedBox(height: 30),
+                    Text(
                       'Services\n\nAbout Us\n\nProject\n\nCustomer',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -99,13 +97,12 @@ class FooterBar extends StatelessWidget {
                 ),
               ),
               // Quick Contact section
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 100.5, vertical: 50),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 100.5, vertical: 50),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Quick Contact',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -114,8 +111,8 @@ class FooterBar extends StatelessWidget {
                         color: Color(0xFF202020),
                       ),
                     ),
-                    const SizedBox(height: 30),
-                    const Text(
+                    SizedBox(height: 30),
+                    Text(
                       '+62 896 777 8907\n\nBetatechsolutions.com\n\nContact Us\n\nTerms Of Service',
                       style: TextStyle(
                         fontFamily: 'Poppins',
@@ -136,13 +133,13 @@ class FooterBar extends StatelessWidget {
             height: 40,
           ),
           // Footer bottom text
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 50, 15),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(0, 0, 50, 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                const Text(
+                Text(
                   'Copyright @ 2025 Beta tech solutions All rights reserved',
                   style: TextStyle(
                     fontFamily: 'Poppins',
