@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../widgets/bottomBarWidget.dart';
+import '../widgets/feedBackWidget.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -33,11 +36,12 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xFFE3E3E3), width: 1.0),
+                  border:
+                      Border.all(color: const Color(0xFFE3E3E3), width: 1.0),
                   borderRadius: BorderRadius.circular(100),
-                  color: Color(0xFFFBFBFB),
+                  color: const Color(0xFFFBFBFB),
                 ),
                 height: 75,
                 width: 1818,
@@ -61,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         const SizedBox(width: 224),
-                        Row(
+                        Wrap(
                           children: [
                             NavLink(
                               title: 'Home',
@@ -92,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    Row(
+                    Wrap(
                       children: [
                         Container(
                           height: 50,
@@ -133,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
             Row(
@@ -152,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                               style: GoogleFonts.poppins(
                                 fontSize: 40,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFFEB6F2D), // Orange color
+                                color: const Color(0xFFEB6F2D), // Orange color
                               ),
                             ),
                             TextSpan(
@@ -168,7 +172,7 @@ class _HomePageState extends State<HomePage> {
                               style: GoogleFonts.poppins(
                                 fontSize: 40,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFFEB6F2D), // Orange color
+                                color: const Color(0xFFEB6F2D), // Orange color
                               ),
                             ),
                           ],
@@ -176,13 +180,13 @@ class _HomePageState extends State<HomePage> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    SizedBox(height: 20), // Space between text and image
+                    const SizedBox(height: 20), // Space between text and image
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 16),
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
                           decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: const Color(0xFFEEEEEE),
                             borderRadius:
                                 BorderRadius.circular(50), // Rounded edges
                           ),
@@ -199,18 +203,18 @@ class _HomePageState extends State<HomePage> {
                                   color: Colors.black, // Black text color
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 55,
                               ),
                               Container(
                                   width: 42,
                                   height: 42,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors
                                         .white, // White background for the icon
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.arrow_outward, // Arrow icon
                                     color: Color(
                                         0xFF8F8F8F), // Updated arrow color to #8F8F8F
@@ -219,19 +223,20 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         Container(
                           height: 52,
                           width: 271,
-                          padding: EdgeInsets.symmetric(horizontal: 16),
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
                           decoration: BoxDecoration(
                             color: Colors.white, // Background color
                             borderRadius:
                                 BorderRadius.circular(50), // Rounded edges
                             border: Border.all(
-                              color: Color(0xFFE3E3E3), // Light border color
+                              color:
+                                  const Color(0xFFE3E3E3), // Light border color
                               width: 1,
                             ),
                           ),
@@ -247,7 +252,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Colors.black, // Black text color
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 15,
                               ),
                               Row(
@@ -261,7 +266,7 @@ class _HomePageState extends State<HomePage> {
                                           width: 39,
                                           height: 39,
                                           decoration: BoxDecoration(
-                                            color: Color(0xFFF5F5F5),
+                                            color: const Color(0xFFF5F5F5),
                                             boxShadow: [
                                               BoxShadow(
                                                 color: Colors.black.withOpacity(
@@ -270,13 +275,13 @@ class _HomePageState extends State<HomePage> {
                                                     5, // Softness of the shadow
                                                 spreadRadius:
                                                     1, // Spread radius
-                                                offset: Offset(0,
+                                                offset: const Offset(0,
                                                     3), // Horizontal and vertical offset
                                               ),
                                             ], // Slightly lighter grey color
                                             shape: BoxShape.circle,
                                           ),
-                                          child: Center(
+                                          child: const Center(
                                             child: Icon(
                                               Icons.add, // Plus icon
                                               color: Color(
@@ -291,7 +296,7 @@ class _HomePageState extends State<HomePage> {
                                         width: 39,
                                         height: 39,
                                         decoration: BoxDecoration(
-                                          color: Color(
+                                          color: const Color(
                                               0xFFD6D6D6), // Light grey color
                                           shape: BoxShape.circle,
                                           boxShadow: [
@@ -301,7 +306,7 @@ class _HomePageState extends State<HomePage> {
                                               blurRadius:
                                                   5, // Softness of the shadow
                                               spreadRadius: 1, // Spread radius
-                                              offset: Offset(0,
+                                              offset: const Offset(0,
                                                   3), // Horizontal and vertical offset
                                             ),
                                           ],
@@ -325,7 +330,7 @@ class _HomePageState extends State<HomePage> {
                                           width: 39,
                                           height: 39,
                                           decoration: BoxDecoration(
-                                            color: Color(
+                                            color: const Color(
                                                 0xFFD6D6D6), // Light grey color
                                             shape: BoxShape.circle,
                                             boxShadow: [
@@ -336,7 +341,7 @@ class _HomePageState extends State<HomePage> {
                                                     5, // Softness of the shadow
                                                 spreadRadius:
                                                     1, // Spread radius
-                                                offset: Offset(0,
+                                                offset: const Offset(0,
                                                     3), // Horizontal and vertical offset
                                               ),
                                             ],
@@ -361,7 +366,7 @@ class _HomePageState extends State<HomePage> {
                                           width: 39,
                                           height: 39,
                                           decoration: BoxDecoration(
-                                            color: Color(
+                                            color: const Color(
                                                 0xFFD6D6D6), // Light grey color
                                             shape: BoxShape.circle,
                                             boxShadow: [
@@ -372,7 +377,7 @@ class _HomePageState extends State<HomePage> {
                                                     5, // Softness of the shadow
                                                 spreadRadius:
                                                     1, // Spread radius
-                                                offset: Offset(0,
+                                                offset: const Offset(0,
                                                     3), // Horizontal and vertical offset
                                               ),
                                             ],
@@ -397,7 +402,7 @@ class _HomePageState extends State<HomePage> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Row(
@@ -406,9 +411,10 @@ class _HomePageState extends State<HomePage> {
                         // First Card
                         Container(
                           width: 270,
-                          padding: EdgeInsets.all(16),
+                          padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: Color(0xFFF5F5F5), // Light background color
+                            color: const Color(
+                                0xFFF5F5F5), // Light background color
                             borderRadius:
                                 BorderRadius.circular(20), // Rounded edges
                           ),
@@ -423,7 +429,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Colors.black,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                   height: 10), // Space between text and image
                               Padding(
                                 padding: const EdgeInsets.only(left: 120.0),
@@ -436,18 +442,18 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                   height: 10), // Space between image and icon
                               Align(
                                 alignment: Alignment.bottomLeft,
                                 child: Container(
                                   width: 30,
                                   height: 30,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.black,
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.arrow_outward,
                                     color: Colors.white,
                                     size: 16,
@@ -457,13 +463,15 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                        SizedBox(width: 20), // Space between the two cards
+                        const SizedBox(
+                            width: 20), // Space between the two cards
                         // Second Card
                         Container(
                           width: 270,
-                          padding: EdgeInsets.all(16),
+                          padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: Color(0xFFF5F5F5), // Light background color
+                            color: const Color(
+                                0xFFF5F5F5), // Light background color
                             borderRadius:
                                 BorderRadius.circular(20), // Rounded edges
                           ),
@@ -478,7 +486,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Colors.black,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                   height: 10), // Space between text and image
                               Padding(
                                 padding: const EdgeInsets.only(left: 120.0),
@@ -491,18 +499,18 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                   height: 10), // Space between image and icon
                               Align(
                                 alignment: Alignment.bottomLeft,
                                 child: Container(
                                   width: 30,
                                   height: 30,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.black,
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.arrow_outward,
                                     color: Colors.white,
                                     size: 16,
@@ -522,7 +530,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     // Image Asset
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20))),
                       child: Image.asset(
                         'assets/workstation.png',
@@ -535,7 +543,7 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
 
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -547,9 +555,9 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     // "About Us" text
                     Container(
-                      padding:
-                          EdgeInsets.all(4), // Optional padding around the text
-                      child: Text(
+                      padding: const EdgeInsets.all(
+                          4), // Optional padding around the text
+                      child: const Text(
                         'About Us',
                         style: TextStyle(
                           fontFamily: 'Poppins', // Font family
@@ -560,9 +568,9 @@ class _HomePageState extends State<HomePage> {
                         textAlign: TextAlign.left, // Align text to the left
                       ),
                     ),
-                    SizedBox(height: 16), // Space between the two texts
+                    const SizedBox(height: 16), // Space between the two texts
                     // "Unleashing the Full Potential..." text
-                    Text(
+                    const Text(
                       'Unleashing the Full Potential of Your Brand\nwith Creativity and Strategic Vision',
                       style: TextStyle(
                         fontFamily: 'Poppins', // Font family
@@ -578,7 +586,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 140),
               child: Row(
@@ -598,9 +606,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 40), // Space between the image and text
+                  const SizedBox(width: 40), // Space between the image and text
                   // Right: Text Section
-                  Expanded(
+                  const Expanded(
                     flex: 3,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -700,7 +708,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         // Main Heading
                         RichText(
-                          text: TextSpan(
+                          text: const TextSpan(
                             text: 'Services We ',
                             style: TextStyle(
                               fontFamily: 'Poppins',
@@ -718,9 +726,9 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         // Subtext
-                        Text(
+                        const Text(
                           'We offer a wide range of design services to meet all your creative needs:',
                           style: TextStyle(
                             fontFamily: 'Poppins',
@@ -730,7 +738,7 @@ class _HomePageState extends State<HomePage> {
                             color: Color(0xFF202020),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         // Image Section with Play Button
                         Stack(
                           children: [
@@ -754,7 +762,7 @@ class _HomePageState extends State<HomePage> {
                                     width:
                                         65, // Larger than the foreground circle
                                     height: 65,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Colors
                                           .white, // White color for background
                                       shape: BoxShape.circle,
@@ -764,11 +772,11 @@ class _HomePageState extends State<HomePage> {
                                   Container(
                                     width: 50,
                                     height: 50,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Color(0xFFEB6F2D), // Orange color
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.play_arrow,
                                       color: Colors.white,
                                       size: 24,
@@ -782,7 +790,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 20), // Space between the sections
+                  const SizedBox(width: 20), // Space between the sections
                   // Right Section
                   Expanded(
                     flex: 5,
@@ -796,12 +804,13 @@ class _HomePageState extends State<HomePage> {
                               horizontal: 0, vertical: 95),
                           child: Container(
                             width: 180,
-                            padding: EdgeInsets.all(16),
+                            padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
-                              color: Color(0xFFEB6F2D), // Orange background
+                              color:
+                                  const Color(0xFFEB6F2D), // Orange background
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Icon(
@@ -834,9 +843,9 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         // Card 2
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 0, vertical: 95),
+                        const Padding(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 0, vertical: 95),
                           child: ServiceCard(
                             icon: Icons.web,
                             title: 'Web development and UI/UX',
@@ -845,9 +854,9 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         // Card 3
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 0, vertical: 95),
+                        const Padding(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 0, vertical: 95),
                           child: ServiceCard(
                             icon: Icons.cloud,
                             title: 'SaaS-based solutions',
@@ -856,9 +865,9 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         // Card 4
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 0, vertical: 95),
+                        const Padding(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 0, vertical: 95),
                           child: ServiceCard(
                             icon: Icons.video_library,
                             title: 'Video Production and Editing',
@@ -908,7 +917,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 20), // Space between image and text
+                  const SizedBox(width: 20), // Space between image and text
                   // Right Section: Text
                   Expanded(
                     flex: 5,
@@ -920,7 +929,7 @@ class _HomePageState extends State<HomePage> {
                           // Heading
                           Row(
                             children: [
-                              Text(
+                              const Text(
                                 'Who ',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
@@ -929,7 +938,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Color(0xFFEB6F2D), // Orange color
                                 ),
                               ),
-                              Text(
+                              const Text(
                                 'We Are ?',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
@@ -938,16 +947,16 @@ class _HomePageState extends State<HomePage> {
                                   color: Color(0xFF202020), // Dark text color
                                 ),
                               ),
-                              SizedBox(width: 12),
+                              const SizedBox(width: 12),
                               Image.asset(
                                 'assets/vector.png', // Replace with your background image path
                                 fit: BoxFit.cover,
                               ),
                             ],
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           // Subtext
-                          Text(
+                          const Text(
                             'We are committed to delivering comprehensive design solutions that enhance your brand image. Our company has a mission, including:',
                             style: TextStyle(
                               fontFamily: 'Poppins',
@@ -957,9 +966,9 @@ class _HomePageState extends State<HomePage> {
                               color: Color(0xFF202020), // Dark text color
                             ),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           // Mission Points
-                          Column(
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               MissionPoint(
@@ -987,7 +996,329 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height: 150,
+            ),
+
+            const Row(
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceEvenly, // Spreads items evenly
+              children: [
+                // First Column
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '20',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF202020), // Dark text color
+                      ),
+                    ),
+                    SizedBox(height: 8), // Spacing between number and label
+                    Text(
+                      'Year Experience',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF9E9E9E), // Light grey color
+                      ),
+                    ),
+                  ],
+                ),
+                // Second Column
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '296',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF202020), // Dark text color
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Business',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF9E9E9E), // Light grey color
+                      ),
+                    ),
+                  ],
+                ),
+                // Third Column
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '36',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF202020), // Dark text color
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Expert',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF9E9E9E), // Light grey color
+                      ),
+                    ),
+                  ],
+                ),
+                // Fourth Column
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '106 K+',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF202020), // Dark text color
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Happy Client',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF9E9E9E), // Light grey color
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 150),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // Heading
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: RichText(
+                    text: const TextSpan(
+                      text: 'Recent ',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 36,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFFEB6F2D), // Orange color for "Recent"
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Project',
+                          style: TextStyle(
+                            color: Color(0xFF202020), // Dark text color
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                // Row with navigation buttons and cards
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Left Navigation Button
+                    Padding(
+                      padding: const EdgeInsets.only(left: 100.0),
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.white, // Background color
+                          border: Border.all(
+                            color: const Color(0xFFEB6F2D), // Orange border
+                            width: 2,
+                          ),
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Center(
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Color(0xFFEB6F2D), // Orange icon
+                            size: 24,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 20),
+                    // Cards
+                    const Expanded(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Center(
+                          child: Row(
+                            mainAxisAlignment:
+                                MainAxisAlignment.center, // Center the cards
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(220, 80, 0, 0),
+                                child: HoverableProjectCard(
+                                  title: 'Social Media Design Solutions',
+                                  description:
+                                      'We create effective content strategies to attract your target audience...',
+                                  gradientStart: Colors.black54,
+                                  gradientEnd: Colors.black,
+                                ),
+                              ),
+                              SizedBox(width: 20),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 70.0),
+                                child: HoverableProjectCard(
+                                  title: 'Marketing Design Services',
+                                  description:
+                                      'Well-designed marketing materials that strengthen your brand...',
+                                  gradientStart: Colors.black54,
+                                  gradientEnd: Colors.black,
+                                ),
+                              ),
+                              SizedBox(width: 20),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
+                                child: HoverableProjectCard(
+                                  title: 'Website Design Solutions',
+                                  description:
+                                      'A well-designed website that increases brand credibility...',
+                                  gradientStart: Colors.black54,
+                                  gradientEnd: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 20),
+                    // Right Navigation Button
+                    Padding(
+                      padding: const EdgeInsets.only(right: 100.0),
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.white, // Background color
+                          border: Border.all(
+                            color: const Color(0xFFEB6F2D), // Orange border
+                            width: 2,
+                          ),
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Center(
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: Color(0xFFEB6F2D), // Orange icon
+                            size: 24,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+
+            const SizedBox(
+              height: 100,
+            ),
+
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Heading
+                  RichText(
+                    text: TextSpan(
+                      text: 'Best Pricing ',
+                      style: GoogleFonts.poppins(
+                        fontSize: 36,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Plan',
+                          style: GoogleFonts.poppins(
+                            fontSize: 36,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFFEB6F2D), // Orange color
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 40),
+                  // Pricing Plans Row
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      PricingCard(
+                        planName: 'Regular',
+                        price: '\$49',
+                        features: [
+                          'Basic Branding Package',
+                          'Social Media Management',
+                          'Performance Reports'
+                        ],
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 70.0),
+                        child: PricingCard(
+                          planName: 'Gold',
+                          price: '\$69',
+                          features: [
+                            'Comprehensive Branding',
+                            'Enhanced Social Media Management',
+                            'SEO & Website Optimization'
+                          ],
+                        ),
+                      ),
+                      PricingCard(
+                        planName: 'Platinum',
+                        price: '\$79',
+                        features: [
+                          'Full Branding Suite',
+                          'Advanced Digital Marketing',
+                          'Custom Analytics & Reporting'
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 110,
+            ),
+            const FeedbackWidget(),
+
+            SizedBox(
+              height: 110,
+            ),
+            FooterBar()
           ],
         ),
       ),
@@ -1046,9 +1377,9 @@ class ServiceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 180,
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Color(0xFFF5F5F5), // Light grey background
+        color: const Color(0xFFF5F5F5), // Light grey background
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -1056,23 +1387,23 @@ class ServiceCard extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: Color(0xFFEB6F2D), // Orange icon color
+            color: const Color(0xFFEB6F2D), // Orange icon color
             size: 30,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontFamily: 'Poppins',
               fontSize: 16,
               fontWeight: FontWeight.w600,
               color: Color(0xFF202020),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             description,
-            style: TextStyle(
+            style: const TextStyle(
               fontFamily: 'Poppins',
               fontSize: 12,
               fontWeight: FontWeight.w400,
@@ -1111,12 +1442,12 @@ class MissionPoint extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        SizedBox(width: 10), // Space between image and text
+        const SizedBox(width: 10), // Space between image and text
         // Text
         Expanded(
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               fontFamily: 'Poppins',
               fontSize: 14,
               fontWeight: FontWeight.w400,
@@ -1130,41 +1461,284 @@ class MissionPoint extends StatelessWidget {
   }
 }
 
+class HoverableProjectCard extends StatefulWidget {
+  final String title;
+  final String description;
+  final Color gradientStart;
+  final Color gradientEnd;
 
-          // Row(
-          //           children: [
-          //             Text.rich(
-          //               TextSpan(
-          //                 children: [
-          //                   TextSpan(
-          //                     text: 'Transforming ',
-          //                     style: GoogleFonts.poppins(
-          //                       fontSize: 50,
-          //                       fontWeight: FontWeight.w700,
-          //                       color: Color(
-          //                           0xFFEB6F2D), // Color for "Transforming"
-          //                     ),
-          //                   ),
-          //                   TextSpan(
-          //                     text: 'Your Ideas \ninto ',
-          //                     style: GoogleFonts.poppins(
-          //                       fontSize: 50,
-          //                       fontWeight: FontWeight.w700,
-          //                       color: Colors.black,
-          //                     ),
-          //                   ),
-          //                   TextSpan(
-          //                     text: 'Stunning Designs',
-          //                     style: GoogleFonts.poppins(
-          //                       fontSize: 50,
-          //                       fontWeight: FontWeight.w700,
-          //                       color:
-          //                           Color(0xFFEB6F2D), // Color for "Stunning"
-          //                     ),
-          //                   ),
-          //                 ],
-          //               ),
-          //             ),
-          //             const SizedBox(width: 10),
-          //           ],
-          //         ),
+  const HoverableProjectCard({
+    Key? key,
+    required this.title,
+    required this.description,
+    required this.gradientStart,
+    required this.gradientEnd,
+  }) : super(key: key);
+
+  @override
+  _HoverableProjectCardState createState() => _HoverableProjectCardState();
+}
+
+class _HoverableProjectCardState extends State<HoverableProjectCard>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  bool _isHovered = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 300),
+    );
+
+    _animation = Tween<double>(begin: 1.0, end: 1.1).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeOut),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          _isHovered = true;
+          _controller.forward();
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          _isHovered = false;
+          _controller.reverse();
+        });
+      },
+      child: AnimatedBuilder(
+        animation: _controller,
+        builder: (context, child) {
+          return Transform.scale(
+            scale: _animation.value,
+            child: Container(
+              width: 250,
+              height: 350,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(24),
+                gradient: LinearGradient(
+                  colors: [widget.gradientStart, widget.gradientEnd],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+                boxShadow: _isHovered
+                    ? [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 10,
+                          offset: const Offset(0, 10),
+                        ),
+                      ]
+                    : [],
+              ),
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      widget.title,
+                      style: const TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    widget.description,
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white70,
+                    ),
+                  ),
+                  const Align(
+                    alignment: Alignment.bottomRight,
+                    child: Icon(
+                      Icons.arrow_forward,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class PricingCard extends StatelessWidget {
+  final String planName;
+  final String price;
+  final List<String> features;
+
+  const PricingCard({
+    Key? key,
+    required this.planName,
+    required this.price,
+    required this.features,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 280,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: const Color(0xFFE3E3E3), // Light border color
+          width: 1,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 5,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Plan Name
+          Row(
+            children: [
+              Container(
+                width:
+                    50, // Adjust container width to match the icon's original size
+                height:
+                    50, // Adjust container height to match the icon's original size
+                child: Image.asset(
+                  'assets/newthing.png', // Replace with your image asset path
+                  fit: BoxFit
+                      .contain, // Ensures the image fits within the container
+                ),
+              ),
+              const SizedBox(width: 10),
+              Text(
+                planName,
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          // Price
+          RichText(
+            text: TextSpan(
+              text: price,
+              style: GoogleFonts.poppins(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+              children: [
+                TextSpan(
+                  text: '/Monthly',
+                  style: GoogleFonts.poppins(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          // Features
+          ...features.map(
+            (feature) => Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Container(
+                    width: 30, // Adjust circle size as needed
+                    height: 30,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: const Color(
+                            0xFFE0E0E0), // Light grey color for border
+                        width: 1.5, // Border thickness
+                      ),
+                      color: Colors.white, // Background color of the circle
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        Icons.check, // Checkmark icon
+                        color: Colors.black, // Black color for the icon
+                        size: 18, // Adjust icon size
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    feature,
+                    style: GoogleFonts.poppins(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          // Button
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                // Handle button press
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFEB6F2D), // Orange color
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              child: Text(
+                'CHOOSE PACKAGE',
+                style: GoogleFonts.poppins(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
