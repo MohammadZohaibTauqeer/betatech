@@ -115,21 +115,27 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const SizedBox(width: 14),
                         // Search Icon
-                        CircleAvatar(
-                          radius: 20,
-                          backgroundColor: const Color(0xFFEEEEEE),
-                          child: IconButton(
-                            onPressed: () {
-                              // Add search functionality
-                            },
-                            icon: const Icon(Icons.search),
-                            color: Colors.grey,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: CircleAvatar(
+                            radius: 20,
+                            backgroundColor: const Color(0xFFEEEEEE),
+                            child: IconButton(
+                              onPressed: () {
+                                // Add search functionality
+                              },
+                              icon: const Icon(Icons.search),
+                              color: Colors.grey,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 13),
-                        const CircleAvatar(
-                          radius: 20,
-                          backgroundColor: const Color(0xFFC4C4C4),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: const CircleAvatar(
+                            radius: 20,
+                            backgroundColor: const Color(0xFFC4C4C4),
+                          ),
                         ),
                       ],
                     ),
@@ -142,13 +148,13 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 170.0),
-                      child: Text.rich(
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(300.0, 0, 0, 0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text.rich(
                         TextSpan(
                           children: [
                             TextSpan(
@@ -179,154 +185,121 @@ class _HomePageState extends State<HomePage> {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                    ),
-                    const SizedBox(height: 20), // Space between text and image
-                    Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFEEEEEE),
-                            borderRadius:
-                                BorderRadius.circular(50), // Rounded edges
-                          ),
-                          height: 52,
-                          width: 271,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Get your design',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black, // Black text color
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 55,
-                              ),
-                              Container(
-                                  width: 42,
-                                  height: 42,
-                                  decoration: const BoxDecoration(
-                                    color: Colors
-                                        .white, // White background for the icon
-                                    shape: BoxShape.circle,
+                      const SizedBox(
+                          height: 20), // Space between text and image
+                      Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFEEEEEE),
+                              borderRadius:
+                                  BorderRadius.circular(50), // Rounded edges
+                            ),
+                            height: 52,
+                            width: 271,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Get your design',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black, // Black text color
                                   ),
-                                  child: const Icon(
-                                    Icons.arrow_outward, // Arrow icon
-                                    color: Color(
-                                        0xFF8F8F8F), // Updated arrow color to #8F8F8F
-                                    size: 15, // Icon size
-                                  )),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        Container(
-                          height: 52,
-                          width: 271,
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          decoration: BoxDecoration(
-                            color: Colors.white, // Background color
-                            borderRadius:
-                                BorderRadius.circular(50), // Rounded edges
-                            border: Border.all(
-                              color:
-                                  const Color(0xFFE3E3E3), // Light border color
-                              width: 1,
+                                ),
+                                const SizedBox(
+                                  width: 55,
+                                ),
+                                Container(
+                                    width: 42,
+                                    height: 42,
+                                    decoration: const BoxDecoration(
+                                      color: Colors
+                                          .white, // White background for the icon
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Icon(
+                                      Icons.arrow_outward, // Arrow icon
+                                      color: Color(
+                                          0xFF8F8F8F), // Updated arrow color to #8F8F8F
+                                      size: 15, // Icon size
+                                    )),
+                              ],
                             ),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              // Text on the left
-                              Text(
-                                '10k+ Client',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black, // Black text color
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Container(
+                            height: 52,
+                            width: 271,
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            decoration: BoxDecoration(
+                              color: Colors.white, // Background color
+                              borderRadius:
+                                  BorderRadius.circular(50), // Rounded edges
+                              border: Border.all(
+                                color: const Color(
+                                    0xFFE3E3E3), // Light border color
+                                width: 1,
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                // Text on the left
+                                Text(
+                                  '10k+ Client',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black, // Black text color
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 15,
-                              ),
-                              Row(
-                                children: [
-                                  Stack(
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 95.0),
-                                        child: Container(
-                                          width: 39,
-                                          height: 39,
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xFFF5F5F5),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.black.withOpacity(
-                                                    0.1), // Shadow color
-                                                blurRadius:
-                                                    5, // Softness of the shadow
-                                                spreadRadius:
-                                                    1, // Spread radius
-                                                offset: const Offset(0,
-                                                    3), // Horizontal and vertical offset
-                                              ),
-                                            ], // Slightly lighter grey color
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: const Center(
-                                            child: Icon(
-                                              Icons.add, // Plus icon
-                                              color: Color(
-                                                  0xFF8F8F8F), // Grey icon color
-                                              size: 16,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      // First Circle with Image
-                                      Container(
-                                        width: 39,
-                                        height: 39,
-                                        decoration: BoxDecoration(
-                                          color: const Color(
-                                              0xFFD6D6D6), // Light grey color
-                                          shape: BoxShape.circle,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black.withOpacity(
-                                                  0.1), // Shadow color
-                                              blurRadius:
-                                                  5, // Softness of the shadow
-                                              spreadRadius: 1, // Spread radius
-                                              offset: const Offset(0,
-                                                  3), // Horizontal and vertical offset
-                                            ),
-                                          ],
-                                        ),
-                                        child: ClipOval(
-                                          child: Image.asset(
-                                            'assets/person1.jpg', // Path to your image
-                                            fit: BoxFit
-                                                .cover, // Ensures the image fills the circle
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                Row(
+                                  children: [
+                                    Stack(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 95.0),
+                                          child: Container(
                                             width: 39,
                                             height: 39,
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFFF5F5F5),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.black
+                                                      .withOpacity(
+                                                          0.1), // Shadow color
+                                                  blurRadius:
+                                                      5, // Softness of the shadow
+                                                  spreadRadius:
+                                                      1, // Spread radius
+                                                  offset: const Offset(0,
+                                                      3), // Horizontal and vertical offset
+                                                ),
+                                              ], // Slightly lighter grey color
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: const Center(
+                                              child: Icon(
+                                                Icons.add, // Plus icon
+                                                color: Color(
+                                                    0xFF8F8F8F), // Grey icon color
+                                                size: 16,
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                      ),
-
-                                      // Second Circle with Image
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 32.0),
-                                        child: Container(
+                                        // First Circle with Image
+                                        Container(
                                           width: 39,
                                           height: 39,
                                           decoration: BoxDecoration(
@@ -356,190 +329,235 @@ class _HomePageState extends State<HomePage> {
                                             ),
                                           ),
                                         ),
-                                      ),
 
-                                      // Third Circle with Image
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 65.0),
-                                        child: Container(
-                                          width: 39,
-                                          height: 39,
-                                          decoration: BoxDecoration(
-                                            color: const Color(
-                                                0xFFD6D6D6), // Light grey color
-                                            shape: BoxShape.circle,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.black.withOpacity(
-                                                    0.1), // Shadow color
-                                                blurRadius:
-                                                    5, // Softness of the shadow
-                                                spreadRadius:
-                                                    1, // Spread radius
-                                                offset: const Offset(0,
-                                                    3), // Horizontal and vertical offset
+                                        // Second Circle with Image
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 32.0),
+                                          child: Container(
+                                            width: 39,
+                                            height: 39,
+                                            decoration: BoxDecoration(
+                                              color: const Color(
+                                                  0xFFD6D6D6), // Light grey color
+                                              shape: BoxShape.circle,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.black
+                                                      .withOpacity(
+                                                          0.1), // Shadow color
+                                                  blurRadius:
+                                                      5, // Softness of the shadow
+                                                  spreadRadius:
+                                                      1, // Spread radius
+                                                  offset: const Offset(0,
+                                                      3), // Horizontal and vertical offset
+                                                ),
+                                              ],
+                                            ),
+                                            child: ClipOval(
+                                              child: Image.asset(
+                                                'assets/person1.jpg', // Path to your image
+                                                fit: BoxFit
+                                                    .cover, // Ensures the image fills the circle
+                                                width: 39,
+                                                height: 39,
                                               ),
-                                            ],
-                                          ),
-                                          child: ClipOval(
-                                            child: Image.asset(
-                                              'assets/person1.jpg', // Path to your image
-                                              fit: BoxFit
-                                                  .cover, // Ensures the image fills the circle
-                                              width: 39,
-                                              height: 39,
                                             ),
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        // First Card
-                        Container(
-                          width: 270,
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: const Color(
-                                0xFFF5F5F5), // Light background color
-                            borderRadius:
-                                BorderRadius.circular(20), // Rounded edges
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Creative Expertise in\nInnovative Design',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
+
+                                        // Third Circle with Image
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 65.0),
+                                          child: Container(
+                                            width: 39,
+                                            height: 39,
+                                            decoration: BoxDecoration(
+                                              color: const Color(
+                                                  0xFFD6D6D6), // Light grey color
+                                              shape: BoxShape.circle,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.black
+                                                      .withOpacity(
+                                                          0.1), // Shadow color
+                                                  blurRadius:
+                                                      5, // Softness of the shadow
+                                                  spreadRadius:
+                                                      1, // Spread radius
+                                                  offset: const Offset(0,
+                                                      3), // Horizontal and vertical offset
+                                                ),
+                                              ],
+                                            ),
+                                            child: ClipOval(
+                                              child: Image.asset(
+                                                'assets/person1.jpg', // Path to your image
+                                                fit: BoxFit
+                                                    .cover, // Ensures the image fills the circle
+                                                width: 39,
+                                                height: 39,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              const SizedBox(
-                                  height: 10), // Space between text and image
-                              Padding(
-                                padding: const EdgeInsets.only(left: 120.0),
-                                child: Center(
-                                  child: Image.asset(
-                                    'assets/flames.png', // Path to your image
-                                    height: 80, // Adjust as needed
-                                    width: 100, // Adjust as needed
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                  height: 10), // Space between image and icon
-                              Align(
-                                alignment: Alignment.bottomLeft,
-                                child: Container(
-                                  width: 30,
-                                  height: 30,
-                                  decoration: const BoxDecoration(
-                                    color: Colors.black,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Icon(
-                                    Icons.arrow_outward,
-                                    color: Colors.white,
-                                    size: 16,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                            width: 20), // Space between the two cards
-                        // Second Card
-                        Container(
-                          width: 270,
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: const Color(
-                                0xFFF5F5F5), // Light background color
-                            borderRadius:
-                                BorderRadius.circular(20), // Rounded edges
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Tailored Solutions:\nCustomized for You',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
-                                ),
-                              ),
-                              const SizedBox(
-                                  height: 10), // Space between text and image
-                              Padding(
-                                padding: const EdgeInsets.only(left: 120.0),
-                                child: Center(
-                                  child: Image.asset(
-                                    'assets/swirling.png', // Path to your image
-                                    height: 80, // Adjust as needed
-                                    width: 100, // Adjust as needed
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                  height: 10), // Space between image and icon
-                              Align(
-                                alignment: Alignment.bottomLeft,
-                                child: Container(
-                                  width: 30,
-                                  height: 30,
-                                  decoration: const BoxDecoration(
-                                    color: Colors.black,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Icon(
-                                    Icons.arrow_outward,
-                                    color: Colors.white,
-                                    size: 16,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // Image Asset
-                    Container(
-                      decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
-                      child: Image.asset(
-                        'assets/workstation.png',
-                        height: 500,
-                        width: 400,
-                        fit: BoxFit.cover,
+                              ],
+                            ),
+                          )
+                        ],
                       ),
-                    ),
-                  ],
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          // First Card
+                          Container(
+                            width: 270,
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: const Color(
+                                  0xFFF5F5F5), // Light background color
+                              borderRadius:
+                                  BorderRadius.circular(20), // Rounded edges
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Creative Expertise in\nInnovative Design',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                const SizedBox(
+                                    height: 10), // Space between text and image
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 120.0),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/flames.png', // Path to your image
+                                      height: 80, // Adjust as needed
+                                      width: 100, // Adjust as needed
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                    height: 10), // Space between image and icon
+                                Align(
+                                  alignment: Alignment.bottomLeft,
+                                  child: Container(
+                                    width: 30,
+                                    height: 30,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.black,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Icon(
+                                      Icons.arrow_outward,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(
+                              width: 20), // Space between the two cards
+                          // Second Card
+                          Container(
+                            width: 270,
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: const Color(
+                                  0xFFF5F5F5), // Light background color
+                              borderRadius:
+                                  BorderRadius.circular(20), // Rounded edges
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Tailored Solutions:\nCustomized for You',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                const SizedBox(
+                                    height: 10), // Space between text and image
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 120.0),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/swirling.png', // Path to your image
+                                      height: 80, // Adjust as needed
+                                      width: 100, // Adjust as needed
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                    height: 10), // Space between image and icon
+                                Align(
+                                  alignment: Alignment.bottomLeft,
+                                  child: Container(
+                                    width: 30,
+                                    height: 30,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.black,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Icon(
+                                      Icons.arrow_outward,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 50,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 80),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      // Image Asset
+                      Container(
+                        decoration: const BoxDecoration(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
+                        child: Image.asset(
+                          'assets/workstation.png',
+                          height: 500,
+                          width: 400,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
@@ -588,7 +606,7 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 60),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 140),
+              padding: const EdgeInsets.fromLTRB(230, 0, 0, 0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -695,8 +713,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 150, vertical: 50),
+              padding: const EdgeInsets.fromLTRB(230, 50, 0, 0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -795,8 +812,8 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     flex: 5,
                     child: Wrap(
-                      spacing: 20, // Space between cards horizontally
-                      runSpacing: 20, // Space between cards vertically
+                      spacing: 10, // Space between cards horizontally
+                      runSpacing: 10, // Space between cards vertically
                       children: [
                         // Card 1
                         Padding(
