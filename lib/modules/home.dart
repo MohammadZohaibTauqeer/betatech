@@ -1,4 +1,10 @@
+// ignore_for_file: unused_import
+
 import 'package:betatech/appColors/colors.dart';
+import 'package:betatech/modules/aboutUs.dart';
+import 'package:betatech/modules/contact.dart';
+import 'package:betatech/modules/portfolio.dart';
+import 'package:betatech/widgets/navLink.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -70,30 +76,35 @@ class _HomePageState extends State<HomePage> {
                             NavLink(
                               title: 'Home',
                               isActive: activeLink == 'Home',
+                              targetPage: const HomePage(),
                               onTap: () => setActiveLink('Home'),
                             ),
                             NavLink(
                               title: 'Services',
                               isActive: activeLink == 'Services',
+                              targetPage: const AboutUs(),
                               onTap: () => setActiveLink('Services'),
                             ),
                             NavLink(
                               title: 'About Us',
                               isActive: activeLink == 'About Us',
+                              targetPage: const AboutUs(),
                               onTap: () => setActiveLink('About Us'),
                             ),
                             NavLink(
                               title: 'Portfolio',
                               isActive: activeLink == 'Portfolio',
+                              targetPage: const Portfolio(),
                               onTap: () => setActiveLink('Portfolio'),
                             ),
                             NavLink(
                               title: 'Review',
                               isActive: activeLink == 'Review',
+                              targetPage: const Contact(),
                               onTap: () => setActiveLink('Review'),
                             ),
                           ],
-                        ),
+                        )
                       ],
                     ),
                     Wrap(
@@ -130,11 +141,11 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         const SizedBox(width: 13),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5.0),
-                          child: const CircleAvatar(
+                        const Padding(
+                          padding: EdgeInsets.only(top: 5.0),
+                          child: CircleAvatar(
                             radius: 20,
-                            backgroundColor: const Color(0xFFC4C4C4),
+                            backgroundColor: Color(0xFFC4C4C4),
                           ),
                         ),
                       ],
@@ -535,7 +546,7 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 50,
                 ),
                 Padding(
@@ -1327,51 +1338,16 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 110,
             ),
             const FeedbackWidget(),
 
-            SizedBox(
+            const SizedBox(
               height: 110,
             ),
             FooterBar()
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class NavLink extends StatelessWidget {
-  final String title;
-  final bool isActive;
-  final VoidCallback onTap; // Callback to handle tap events
-
-  const NavLink({
-    super.key,
-    required this.title,
-    this.isActive = false,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
-        child: Text(
-          title,
-          style: GoogleFonts.poppins(
-            fontSize: 14,
-            fontWeight: isActive ? FontWeight.w700 : FontWeight.w400,
-            decorationColor: Colors.black,
-            color: isActive
-                ? ColorsManager.activeTextColor
-                : ColorsManager.inactiveTextColor,
-          ),
-          textAlign: TextAlign.left,
         ),
       ),
     );

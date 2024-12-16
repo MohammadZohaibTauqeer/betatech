@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 Widget ContactInfoSection() {
   return Container(
-    margin: EdgeInsets.only(top: 40),
-    padding: EdgeInsets.all(20),
+    margin: const EdgeInsets.only(top: 40),
+    padding: const EdgeInsets.all(20),
     color: Colors.grey.shade200,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.end,
@@ -11,13 +11,13 @@ Widget ContactInfoSection() {
         Container(
           height: 250,
           width: 400,
-          padding: EdgeInsets.all(20),
-          margin: EdgeInsets.only(right: 30),
+          padding: const EdgeInsets.all(20),
+          margin: const EdgeInsets.only(right: 30),
           decoration: BoxDecoration(
             color: Colors.orange.shade400,
             borderRadius: BorderRadius.circular(12),
           ),
-          child: Column(
+          child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(

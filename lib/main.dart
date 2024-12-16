@@ -1,3 +1,4 @@
+import 'package:betatech/modules/aboutUs.dart';
 import 'package:betatech/modules/contact.dart';
 import 'package:betatech/modules/home.dart';
 import 'package:betatech/modules/portfolio.dart';
@@ -15,10 +16,10 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        // '/portfolio': (context) => Portfolio(),
-        // '/': (context) => const HomePage(),
-        '/': (context) => Contact(),
-        // '/anotherPage': (context) => const AnotherPage(),
+        '/Portfolio': (context) => const Portfolio(),
+        '/': (context) => const HomePage(),
+        '/Contact': (context) => const Contact(),
+        '/AboutUs': (context) => const AboutUs(),
       },
     );
   }
