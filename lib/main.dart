@@ -1,3 +1,4 @@
+import 'package:betatech/modules/contact.dart';
 import 'package:betatech/modules/home.dart';
 import 'package:betatech/modules/portfolio.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +15,9 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => Portfolio(),
-        //'/': (context) => const HomePage(),
+        // '/portfolio': (context) => Portfolio(),
+        // '/': (context) => const HomePage(),
+        '/': (context) => Contact(),
         // '/anotherPage': (context) => const AnotherPage(),
       },
     );
